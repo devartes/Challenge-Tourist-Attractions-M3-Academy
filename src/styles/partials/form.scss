@@ -1,0 +1,327 @@
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+}
+
+input,
+textarea {
+    border-radius: 8px;
+}
+
+textarea::placeholder,
+textarea,
+input::placeholder,
+input,
+.input-image-container {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    font-family: "Roboto", sans-serif;
+    color: $input-text-color;
+}
+
+.form {
+    width: 66.094%;
+    height: 284px;
+    margin-top: 40px;
+    .form-container {
+        .form-inputs {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 20px;
+            .input-image-container {
+                width: 43.975%;
+                height: 212.01px;
+                border: 2px solid $input-image-border-color;
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                &::after {
+                    content: "Imagem";
+                    text-align: center;
+                    pointer-events: none;
+                }
+                .input-image-content {
+                    width: 101.174%;
+                    height: 212.01px;
+                    z-index: 1;
+                    opacity: 0;
+                }
+                & label {
+                    & span {
+                        & img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+            .form-input-descricao {
+                display: flex;
+                flex-direction: column;
+                width: 53.462%;
+                height: 284px;
+                gap: 20px;
+                .input-titulo {
+                    width: 78.658%;
+                    height: 56.01px;
+                    border: 2px solid $input-titulo-border-color;
+                }
+                .description-content {
+                    width: 100%;
+                    height: 208.01px;
+                    .input-descricao {
+                        width: 100%;
+                        height: 136px;
+                        border: 2px solid $input-descrição-border-color;
+                    }
+                    & button {
+                        background: $button-submit-color;
+                        padding: 15.270px 19.28px;
+                        border: 1px solid $button-submit-color;
+                        border-radius: 8px;
+                        margin-top: 10px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        color: $text-button-submit-color;
+                        float: right;
+                        font-family: "Poppins",sans-serif;
+                    }
+                }
+                .input-titulo::placeholder {
+                    padding: 16px 16px;
+                }
+                .input-descricao::placeholder {
+                    padding: 40px 0 0 20px;
+                }
+            }
+        }
+    }
+}
+
+.input-image-content,
+.input-image-container img {
+    position: absolute;
+}
+
+@media (min-width: $breakpoint-desk) {
+    h1 {
+        font-size: 64px;
+    }
+
+    textarea::placeholder,
+    textarea,
+    input::placeholder,
+    input,
+    .input-image-container {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .form {
+        width: 60.0246%;
+        height: 496px;
+        .form-container {
+            .form-inputs {
+                .input-image-container {
+                    width: 44.904%;
+                    height: 400px;
+                    &::after {
+                        font-weight: 400;
+                        font-size: 32px;
+                        line-height: 48px;
+                    }
+                    .input-image-content {
+                        width: 100.669%;
+                        height: 400px;
+                    }
+                }
+                .form-input-descricao {
+                    width: 54.262%;
+                    height: 496px;
+                    gap: 16px;
+                    .input-titulo {
+                        width: 79.311%;
+                        height: 64px;
+                    }
+                    .description-content {
+                        height: 416px;
+                        .input-descricao {
+                            height: 320px;
+                        }
+                        & button {
+                            padding: 15.151px 19.046px;
+                            font-size: 32px;
+                        }
+                    }
+                    .input-titulo::placeholder {
+                        padding: 10.43px 0 10.14px 16.05px;
+                    }
+                    .input-descricao::placeholder {
+                        padding: 40.66px 16.77px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .form {
+        width: 99.874%;
+        height: 876.78px;
+        .form-container {
+            height: 100%;
+            .form-inputs {
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                gap: 16px;
+                .input-image-container {
+                    width: 100%;
+                    height: 570px;
+                    .input-image-content {
+                        width: 100.403%;
+                        height: 570px;
+                    }
+                }
+                .form-input-descricao {
+                    width: 100%;
+                    height: 289.78px;
+                    gap: 16px;
+                    .input-titulo {
+                        width: 100%;
+                        height: 54.01px;
+                    }
+                    .description-content {
+                        width: 100%;
+                        height: 213.75px;
+                        .input-descricao {
+                            width: 100%;
+                            height: 131.15px;
+                        }
+                        & button {
+                            margin-top: 20.21px;
+                            width: 100%;
+                            padding: 15.270px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .form {
+        width: 100%;
+        height: 500.3px;
+        .form-container {
+            .form-inputs {
+                gap: 17px;
+                .input-image-container {
+                    width: 100%;
+                    height: 212px;
+                    .input-image-content {
+                        width: 100.945%;
+                        height: 212px;
+                    }
+                }
+                .form-input-descricao {
+                    width: 100%;
+                    height: 274.3px;
+                    gap: 19.43px;
+                    .input-titulo {
+                        width: 100%;
+                        height: 54.01px;
+                    }
+                    .description-content {
+                        width: 100%;
+                        height: 197.87px;
+                        & button {
+                            width: 100%;
+                            height: 56px;
+                            margin-top: 6px;
+                        }
+                    }
+                    .input-titulo::placeholder {
+                        padding: 15px 15.69px;
+                    }
+                    .input-descricao::placeholder {
+                        padding: 36.43px 0 0 15.69px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: $breakpoint-desk) and (min-width: $breakpoint-desk-1907){
+    h1 {
+        font-size: 64px;
+    }
+
+    textarea::placeholder,
+    textarea,
+    input::placeholder,
+    input,
+    .input-image-container {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .form {
+        width: 59.9714%;
+        height: 496px;
+        .form-container {
+            .form-inputs {
+                .input-image-container {
+                    width: 44.906%;
+                    height: 400px;
+                    &::after {
+                        font-weight: 400;
+                        font-size: 32px;
+                        line-height: 48px;
+                    }
+                    .input-image-content {
+                        height: 400px;
+                    }
+                }
+                .form-input-descricao {
+                    width: 54.262%;
+                    height: 496px;
+                    gap: 16px;
+                    .input-titulo {
+                        width: 79.311%;
+                        height: 64px;
+                    }
+                    .description-content {
+                        height: 416px;
+                        .input-descricao {
+                            height: 320px;
+                        }
+                        & button {
+                            padding: 15.151px 19.046px;
+                            font-size: 32px;
+                        }
+                    }
+                    .input-titulo::placeholder {
+                        padding: 10.43px 0 10.14px 16.05px;
+                    }
+                    .input-descricao::placeholder {
+                        padding: 40.66px 16.77px;
+                    }
+                }
+            }
+        }
+    }
+}

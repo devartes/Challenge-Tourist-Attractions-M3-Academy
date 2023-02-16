@@ -1,0 +1,30 @@
+main{
+    margin: 0 130px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px 0;
+}
+
+@media (min-width: $breakpoint-desk) {
+    main{
+        margin: 0 130px;
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    main{
+        margin: 0 16px;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    main{
+        margin: 0 16px;
+    }
+}
+
